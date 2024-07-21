@@ -1,20 +1,28 @@
-namespace HeatsGame.Features.CharacterMovement
+﻿namespace HeatsGame.Features.CharacterMovement
 {
     using UnityEngine;
-    using UnityEngine.InputSystem;
 
+    /// <summary>
+    /// Класс для обработки инпута
+    /// </summary>
     public class CharacterInputHandler
     {
         protected InputHandler input = null;
 
-        protected CharacterInputHandler() 
+        public CharacterInputHandler() 
         {
             input = new InputHandler();
             input.Enable();
         }
 
-        protected virtual Vector3 GetMovingDirection() => input.MovmentDefault.Movement.ReadValue<Vector3>();
+        /// <summary>
+        /// Возвращает вектор от нажатия клавиш движения
+        /// </summary>
+        public virtual Vector3 GetMovingDirection() => input.MovmentDefault.Movement.ReadValue<Vector3>();
 
-        protected virtual Vector2 GetRotatingDirection() => input.MovmentDefault.Mouse.ReadValue<Vector2>();
+        /// <summary>
+        /// Возвращает вектор поворота мыши
+        /// </summary>
+        public virtual Vector2 GetRotatingDirection() => input.MovmentDefault.Mouse.ReadValue<Vector2>();
     }
 }
