@@ -52,7 +52,7 @@ namespace HeatsGame.Features.CharacterMovement
                     ""type"": ""Value"",
                     ""id"": ""55c7cbd4-1195-4982-81b0-c0cfedf3801e"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""processors"": ""NormalizeVector2"",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 }

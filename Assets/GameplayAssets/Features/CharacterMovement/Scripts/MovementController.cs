@@ -8,7 +8,7 @@
     [RequireComponent(typeof(CharacterController))]
     public class MovementController : MonoBehaviour
     {
-        [SerializeField] protected float speed;
+        [SerializeField] protected float speed = 0f;
 
         protected Vector3 movingDirection = Vector3.zero;
         
@@ -23,7 +23,7 @@
 
         protected virtual void Update()
         {
-            movingDirection = inputHandler.GetMovingDirection();
+            movingDirection = transform.TransformDirection(inputHandler.GetMovingDirection());
 
             characterController.Move(movingDirection * speed * Time.deltaTime);
         }
