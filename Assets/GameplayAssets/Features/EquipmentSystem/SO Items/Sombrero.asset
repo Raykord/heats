@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Sombrero
   m_EditorClassIdentifier: 
   prefab: {fileID: 100000, guid: 290f57b34312fbf448d3b8ca6b6bd41d, type: 3}
-  name: Sombrero
+  itemName: Sombrero of truth
   description: Cha cha cha!
-  bonusStatName: speed
-  bonusStatValue: 20
+  equipmentType: 0
+  duration:
+    days: 0
+    hours: 0
+    minutes: 5
+  buffs:
+  - stat: 1
+    bonusValue: 20
