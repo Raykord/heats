@@ -13,6 +13,7 @@ namespace HeatsGame.Features.EquipmentSystem
 
         public EqupmentType GetEqupmentType => equipmentType;
         public ItemDuration GetDuration => duration;
+        public GameObject Prefab => prefab;
 
         public Buff[] Buffs => buffs;
 

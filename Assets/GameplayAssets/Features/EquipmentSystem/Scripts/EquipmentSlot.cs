@@ -7,7 +7,11 @@ namespace HeatsGame.Features.EquipmentSystem
         [UnityEngine.SerializeField] protected AbstractEquipmentObject equipmentObject = null;
 
         public EqupmentType EqupmentType => equipmentType;
-        public AbstractEquipmentObject EquipmentObject => equipmentObject;
+        public AbstractEquipmentObject EquipmentObject 
+        {
+            get { return equipmentObject; }
+            set { equipmentObject = value; }
+        }
 
         public EquipmentSlot(EqupmentType type) 
         {
