@@ -1,5 +1,6 @@
 ﻿namespace HeatsGame.Features.CharacterMovement
 {
+    using HeatsGame.Features.EquipmentSystem;
     using UnityEngine;
 
     /// <summary>
@@ -8,7 +9,7 @@
     [RequireComponent(typeof(CharacterController))]
     public class MovementController : MonoBehaviour
     {
-        [SerializeField] protected float speed = 0f;
+        [SerializeField] AbstractPlayerStats stats;
 
         protected Vector3 movingDirection = Vector3.zero;
         
@@ -25,7 +26,7 @@
         {
             movingDirection = transform.TransformDirection(inputHandler.GetMovingDirection());
 
-            characterController.Move(movingDirection * speed * Time.deltaTime);
+            characterController.Move(movingDirection * stats.GetStats(Stats.Speed) * Time.deltaTime);
         }
     }
 }
