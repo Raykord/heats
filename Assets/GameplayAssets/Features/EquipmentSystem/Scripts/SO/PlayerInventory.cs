@@ -20,7 +20,20 @@ namespace HeatsGame.Features.EquipmentSystem
             new EquipmentSlot(EqupmentType.Foots)
         };
 
+        [SerializeField] protected float cash = 0f;
+
+
         public List<EquipmentSlot> GetSlots() => slots;
+        public float GetCash() => cash;
+        public void ChangeCahs(float amount)
+        {
+            cash -= amount;
+            if (cash < 0f)
+            {
+                cash = 0f;
+            }
+        }
+       
 
         public void EquipItem(AbstractEquipmentObject item)
         {
