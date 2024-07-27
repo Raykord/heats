@@ -4,14 +4,17 @@ namespace HeatsGame.Features.EquipmentSystem
 
     public abstract class AbstractEquipmentObject : ScriptableObject
     {
-        [SerializeField] protected GameObject prefab;
-        [SerializeField] protected string itemName;
-        [SerializeField, TextArea(1, 10)] protected string description;
-        [SerializeField] protected EqupmentType equipmentType;
-        [SerializeField] protected ItemDuration duration;
+        [SerializeField] protected GameObject prefab = null;
+        [SerializeField] protected string itemName = string.Empty;
+        [SerializeField, TextArea(1, 10)] protected string description = string.Empty;
+        [SerializeField] protected EqupmentType equipmentType = 0;
+        [SerializeField] protected ItemDuration duration = null;
+        [SerializeField] protected Buff[] buffs = null;
 
         public EqupmentType GetEqupmentType => equipmentType;
         public ItemDuration GetDuration => duration;
+
+        public Buff[] Buffs => buffs;
 
     }
 

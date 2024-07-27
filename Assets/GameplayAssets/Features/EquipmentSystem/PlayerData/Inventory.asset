@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slots:
   - equipmentType: 0
-    equipmentObject: {fileID: 0}
+    equipmentObject: {fileID: 11400000, guid: 38fb70fa247427045898d0e090b9725d, type: 2}
   - equipmentType: 1
     equipmentObject: {fileID: 0}
   - equipmentType: 3

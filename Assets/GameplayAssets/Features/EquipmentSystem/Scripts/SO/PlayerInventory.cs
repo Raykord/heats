@@ -14,6 +14,8 @@ namespace HeatsGame.Features.EquipmentSystem
             new EquipmentSlot(EqupmentType.Legs),
             new EquipmentSlot(EqupmentType.Foots)
         };
+
+        public List<EquipmentSlot> GetSlots() => slots;
     }
 }
 

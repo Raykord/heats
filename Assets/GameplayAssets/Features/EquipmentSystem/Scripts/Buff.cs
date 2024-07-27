@@ -6,5 +6,8 @@ namespace HeatsGame.Features.EquipmentSystem
     {
         [UnityEngine.SerializeField] protected Stats stat = 0;
         [UnityEngine.SerializeField] protected float bonusValue = 0f;
+
+        public Stats Stat => stat;
+        public float BonusValue => bonusValue;
     }
 }
