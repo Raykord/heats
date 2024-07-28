@@ -16,11 +16,7 @@ namespace HeatsGame.Features.Shop
         protected ShopController controller = null;
         protected GameObject instances = null;
 
-        protected void Awake()
-        {
-            controller = FindObjectOfType<ShopController>();
-            
-        }
+        protected void Awake() => controller = FindObjectOfType<ShopController>();
 
         protected void OnEnable()
         {
@@ -77,14 +73,8 @@ namespace HeatsGame.Features.Shop
             }
         }
 
-        protected void ReloadCahs()
-        {
-            cash.text = controller.Inventory.GetCash().ToString();
-        }
+        protected void ReloadCahs() => cash.text = controller.Inventory.GetCash().ToString();
 
-        protected void LoadGame()
-        {
-            SceneManager.LoadSceneAsync(GAME_SCENE);
-        }
+        protected void LoadGame() => SceneManager.LoadSceneAsync(GAME_SCENE);
     }
 }
